@@ -52,8 +52,36 @@
       </div>
     </nav>
     <!-- Body -->
+    <h2>Thank you for taking the time to complete this survey!</h2>
+    <br />
+    <!-- Table -->
+    <br />
+    <h3>User Responses</h3>
+    <br />
     <ul>
-      <li>URL: <%=user.site%></li>
+      <% User.forEach((User,id)=>{%>
+      <!-- Info -->
+      <li>
+        Site URL: <%=User.site%>
+        <br />
+        Use Strong Password: <%=User.passwordSafe%>
+        <br />
+        Site set up with HTTPS: <%=User.https%>
+        <br />
+        Use VPN: <%=User.useVPN%>
+        <br />
+        Comments: <%=User.comment%>
+        <br />
+        <button onclick="window.location.href = '/show/<%=User.id%>';">
+          View
+        </button>
+        <br />
+      </li>
+      <!-- Info -->
+      <%})%>
     </ul>
+
+    <!-- End of Table -->
+    <!-- End of Body -->
   </body>
 </html>

@@ -1,4 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
 body {
+  font-family: "Roboto Mono", monospace;
+}
+
+.navbar-brand,
+.call {
+  font-family: "Roboto Mono", monospace;
 }
 
 #callToAction {
@@ -22,6 +30,40 @@ ul {
   list-style-type: none;
 }
 
-h2 {
+h2,
+h3 {
   text-align: center;
+}
+
+.footer {
+  font-size: 11px;
+  padding: 3px;
+  bottom: 0;
+  /* overflow: hidden; */
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  color: #5a5d5e;
+  font-family: "Roboto Mono", monospace;
+}
+
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  /* 49% {
+    color: transparent;
+  } */
+  50% {
+    color: transparent;
+  }
+  /* 99% {
+    color: transparent;
+  } */
+  100% {
+    color: #000;
+  }
 }

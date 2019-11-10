@@ -52,28 +52,32 @@
       </div>
     </nav>
     <!-- Body -->
-    <div id="callToAction" class="mx-auto" style="width: 80%;">
-      <h2 class="call">
-        Cyber-crime damages will cost the world $6 trillion annually by
-        2021<span class="blinking">_</span>
-      </h2>
-      <br />
-      <h4 class="font-weight-light">
-        How secure do you think your information is?
-      </h4>
-      <br />
-      <!-- BUTTON -->
-      <button
-        type="button"
-        class="btn btn-outline-dark btn-lg"
-        onclick="window.location.href = '/new';"
-      >
-        Start Survey
-      </button>
-    </div>
-    <!-- Footer -->
-    <footer class="footer">
-      Created by Guadalupe Ramirez
-    </footer>
+    <br />
+    <h2>View Details</h2>
+    <br />
+    <table>
+      <tr>
+        <td>
+          <br />
+          Site URL: <%=User.site%>
+          <br />
+          Use Strong Password: <%=User.passwordSafe%>
+          <br />
+          Site set up with HTTPS: <%=User.https%>
+          <br />
+          Use VPN: <%=User.useVPN%>
+          <br />
+          Comments: <%=User.comment%>
+          <br />
+          <button onclick="window.location.href = '/show/<%=User.id%>/edit';">
+            Modify
+          </button>
+          <!-- Delete -->
+          <form action="/show/<%=User.id%>?_method=DELETE" method="POST">
+            <input type="submit" name="submit" value="DELETE" />
+          </form>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>

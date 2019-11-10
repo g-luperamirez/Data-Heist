@@ -53,28 +53,27 @@
     </nav>
     <!-- Edit Form -->
     <br />
-    <h2>Please Review Form Before Submitting</h2>
+    <h2>View Details</h2>
     <br />
-    <form action="/results" method="POST">
+    <form action="/show/<%=User.id%>?_method=PUT" method="POST">
       <div class="mb-3">
-        <label for="site">Site URL</label>
-        <input
+          <label for="site">Site URL</label>
+          <input
           type="text"
           name="site"
           id="site"
           class="form-control"
-          value="<%=data%>"
-        />
-        <br />
+          value="<%=User.site%>"/>
+      </br>
         <p>I am confident I...</p>
         <label for="passwordSafe">Use strong passwords: </label>
-        <input type="checkbox" name="passwordSafe" id="passwordSafe" />
+        <input type="checkbox" name="passwordSafe" id="passwordSafe" value="<%=User.passwordSafe%>" />
         <br />
         <label for="https">Have a site set up with HTTPS: </label>
-        <input type="checkbox" name="https" id="https" />
+        <input type="checkbox" name="https" id="https" value="<%=User.https%>"/>
         <br />
-        <label for="useVNP">Use a VPN when accessing public Wi-Fi: </label>
-        <input type="checkbox" name="useVNP" id="useVNP" />
+        <label for="useVPN">Use a VPN when accessing public Wi-Fi: </label>
+        <input type="checkbox" name="useVPN" id="useVPN" value="<%=User.useVPN%>"/>
         <br />
         <label for="comment">Comments:</label>
         <textarea
@@ -83,10 +82,10 @@
           class="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
-          value="#"
-        ></textarea>
+        ><%=User.comment%>
+      </textarea>
         <br />
-        <input type="submit" class="btn btn-dark" value="Submit" />
+        <input type="submit" value="Edit Response">
       </div>
     </form>
     <!-- End of form -->

@@ -8,7 +8,7 @@ const UserInput = Schema({
   site: { type: String },
   passwordSafe: { type: Boolean },
   https: { type: Boolean },
-  useVNP: { type: Boolean },
+  useVPN: { type: Boolean },
   comment: { type: String }
 });
 
