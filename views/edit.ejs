@@ -67,13 +67,25 @@
       </br>
         <p>I am confident I...</p>
         <label for="passwordSafe">Use strong passwords: </label>
-        <input type="checkbox" name="passwordSafe" id="passwordSafe" value="<%=User.passwordSafe%>" />
+        <input 
+        type="checkbox" name="passwordSafe" id="passwordSafe" 
+        <% if (User.passwordSafe) { %> checked 
+        <%}%>
+        />
         <br />
         <label for="https">Have a site set up with HTTPS: </label>
-        <input type="checkbox" name="https" id="https" value="<%=User.https%>"/>
+        <input type="checkbox" name="https" id="https" 
+        <% if (User.https) { %> 
+        checked 
+        <%}%>
+        />
         <br />
         <label for="useVPN">Use a VPN when accessing public Wi-Fi: </label>
-        <input type="checkbox" name="useVPN" id="useVPN" value="<%=User.useVPN%>"/>
+        <input type="checkbox" name="useVPN" id="useVPN" value="<%=User.useVPN%>"
+        <% if (User.useVPN) { %> 
+        checked 
+        <%}%>
+        />
         <br />
         <label for="comment">Comments:</label>
         <textarea

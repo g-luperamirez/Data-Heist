@@ -161,7 +161,6 @@ app.put("/show/:id", (req, res) => {
       } else {
         res.redirect("/results");
       }
-      res.send(updatedUserInputs);
     }
   );
 });
