@@ -27,6 +27,23 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+  
+        body {
+          font-family: "Roboto Mono", monospace;
+        }
+        .footer {
+  font-size: 11px;
+  padding: 3px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  color: #5a5d5e;
+  font-family: "Roboto Mono", monospace;
+}
+      </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -45,7 +62,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="/New">Check Site Vulnerability</a>
+          <a class="nav-item nav-link" href="/New">Data Vulnerability Survey
+          </a>
           <a class="nav-item nav-link" href="/facts">Cyber Security Facts</a>
           <a class="nav-item nav-link" href="/sources">Sources</a>
         </div>
@@ -53,7 +71,7 @@
     </nav>
     <!-- Form for New -->
 <br>
-    <h2>Data Vulnerability Survey</h2>
+    <h2 class="fontUpdate">Data Vulnerability Survey</h2>
     <br>
     <form action="/results" method="POST">
       <div class="mb-3">
@@ -86,7 +104,7 @@
         ></textarea>
         <br />
 <!-- Button to trigger Modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
           Submit
       </button>
 <!-- Button to trigger Modal -->
@@ -104,8 +122,8 @@
             Are you sure you want to submit your survey? Responses will be tracked and used for public reporting. 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Review</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Review</button>
+                <button type="submit" class="btn btn-dark">Submit</button>
                 <!-- <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" value="Submit" /> -->
               </div>
             </div>
@@ -115,5 +133,9 @@
       </div>
     </form>
 <!-- End of form -->
+<!-- Footer -->
+<footer class="footer">
+    Created by Guadalupe Ramirez
+  </footer>
   </body>
 </html>

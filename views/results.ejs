@@ -27,6 +27,35 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+      body {
+        font-family: "Roboto Mono", monospace;
+      }
+      ul {
+        width: 60%;
+        margin: auto;
+        background-color: #eef0f2;
+        padding-top: 15px;
+        padding-right: 13px;
+      }
+      #buttonsInLine {
+        display: table;
+        margin: 0px auto 0px auto;
+      }
+      .footer {
+        font-size: 11px;
+        padding: 3px;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        color: #5a5d5e;
+        font-family: "Roboto Mono", monospace;
+        background-color: white;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -45,7 +74,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="/New">Check Site Vulnerability</a>
+          <a class="nav-item nav-link" href="/New"
+            >Data Vulnerability Survey
+          </a>
           <a class="nav-item nav-link" href="/facts">Cyber Security Facts</a>
           <a class="nav-item nav-link" href="/sources">Sources</a>
         </div>
@@ -72,16 +103,24 @@
         <br />
         Comments: <%=User.comment%>
         <br />
-        <button onclick="window.location.href = '/show/<%=User.id%>';">
+        <button
+          id="buttonsInLine"
+          class="btn btn-dark"
+          onclick="window.location.href = '/show/<%=User.id%>';"
+        >
           View
         </button>
+        <br />
         <br />
       </li>
       <!-- Info -->
       <%})%>
     </ul>
-
     <!-- End of Table -->
     <!-- End of Body -->
+    <!-- Footer -->
+    <footer class="footer">
+      Created by Guadalupe Ramirez
+    </footer>
   </body>
 </html>

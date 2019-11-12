@@ -1,11 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
-body {
-  font-family: "Roboto Mono", monospace;
-}
-
 .navbar-brand,
-.call {
+.call,
+.fontUpdate {
   font-family: "Roboto Mono", monospace;
 }
 
@@ -17,13 +14,14 @@ body {
 form {
   margin-left: 8%;
   margin-right: 8%;
-  border: 7px solid whitesmoke;
-  background-color: whitesmoke;
+  border: 7px solid #eef0f2;
+  background-color: #eef0f2;
 }
 
 button {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 ul {
@@ -39,12 +37,12 @@ h3 {
   font-size: 11px;
   padding: 3px;
   bottom: 0;
-  /* overflow: hidden; */
   width: 100%;
   position: fixed;
   text-align: center;
   color: #5a5d5e;
   font-family: "Roboto Mono", monospace;
+  background-color: white;
 }
 
 .blinking {

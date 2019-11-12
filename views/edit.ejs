@@ -27,6 +27,33 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+  
+        body {
+          font-family: "Roboto Mono", monospace;
+        }
+        h2 {
+          text-align: center;
+        }
+      form {
+  margin-left: 8%;
+  margin-right: 8%;
+  border: 7px solid #eef0f2;
+  background-color: #eef0f2;
+}
+.footer {
+  font-size: 11px;
+  padding: 3px;
+  bottom: 0;
+  /* overflow: hidden; */
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  color: #5a5d5e;
+  font-family: "Roboto Mono", monospace;
+}
+      </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -45,13 +72,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="/New">Check Site Vulnerability</a>
+          <a class="nav-item nav-link" href="/New">Data Vulnerability Survey
+          </a>
           <a class="nav-item nav-link" href="/facts">Cyber Security Facts</a>
           <a class="nav-item nav-link" href="/sources">Sources</a>
         </div>
       </div>
     </nav>
     <!-- Edit Form -->
+  <div class="content">
     <br />
     <h2>View Details</h2>
     <br />
@@ -97,9 +126,14 @@
         ><%=User.comment%>
       </textarea>
         <br />
-        <input type="submit" value="Edit Response">
+        <input class="btn btn-dark" type="submit" value="Edit Response">
       </div>
     </form>
+    </div>
     <!-- End of form -->
+     <!-- Footer -->
+     <footer class="footer">
+        Created by Guadalupe Ramirez
+      </footer>
   </body>
 </html>
