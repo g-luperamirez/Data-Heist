@@ -15,7 +15,7 @@ Data Heist is a cyber security survey site used to collect responces from everyd
 https://data-heist.herokuapp.com/
 
 ## Responsive
-![Responsivenes](images/responsive.png)
+![Responsivenes](images/responsive)
 
 ## Author
 Guadalupe Ramirez
